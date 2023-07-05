@@ -1,14 +1,20 @@
 console.log('***** Music Collection *****')
 // Create a variable collection that starts as an empty array.
-collection = [];
+const collection = [];
 console.log(collection);
 
 // Add a function named addToCollection. This function should:
 // - Take in the album's title, artist, yearPublished as input parameters
-//function addToCollection(title, artist, yearPublished);
-// - Create a new object having the above properties
-// - Add the new object to the end of the collection array
-// - Return the newly created object
+function addToCollection(title, artist, yearPublished) {
+    // - Create a new object having the above properties
+    console.log('Added new LP: ', title, artist, yearPublished);
+    // - Add the new object to the end of the collection array
+    let newLp = collection[collection.push(title, artist, yearPublished)];
+    // - Return the newly created object
+    return newLp;
+}
+//function addToCollection('Pod', 'Breeders', 1990);
+//console.log(newLp);
 
 // Test the addToCollection function:
 // - Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. 
