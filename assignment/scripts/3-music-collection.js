@@ -27,11 +27,18 @@ console.log(collection);
 // Test the addToCollection function:
 // - Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. 
 //    (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
-addToCollection('"Juju"', 'Siouxsie and the Banshees', 1982);
+addToCollection('"Black Sea"', 'XTC', 1980);
 console.log(collection);
 addToCollection('"Isn`t Anything"', 'My Bloody Valentine', 1988);
 console.log(collection);
 addToCollection('"Loveless"', 'My Bloody Valentine', 1991);
+console.log(collection);
+addToCollection('"Tago Mago"', 'Can', 1971);
+console.log(collection);
+addToCollection('"Hunky Dory"', 'David Bowie', 1971);
+console.log(collection);
+addToCollection('"Zapp"', 'Zapp', 1980);
+console.log(collection);
 // - Console.log each album as added using the returned value.
 // - After all are added, console.log the collection array.
 
