@@ -42,16 +42,21 @@ console.log(collection);
 // - Console.log each album as added using the returned value.
 // - After all are added, console.log the collection array.
 console.log(collection);
-console.log (collection.length);
+console.log(collection.length);
 // Add a function named showCollection. This function should:
-function showCollection() {
+function showCollection(array) {
     // - Take in an array parameter. (This allows it to be reused to show any collection, 
     //    like the results from the find or search.)
     // - Console.log the number of items in the array.
-    console.log (collection.length);
+    console.log(array.length);
     // - Loop over the array and console.log each album's information formatted like: 
-    //    TITLE by ARTIST, published in YEAR.
-//    return title, ' by ', artist, ' published in ', year;
+    for ( i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    //for (let [title, artist, yearPublished] of array) {
+        //    TITLE by ARTIST, published in YEAR.
+    //    console.log(title, ', by ', artist, ' published in ', year);
+    }
+    //    
 }
 // Test the showCollection function.
 showCollection(collection);
@@ -64,6 +69,7 @@ showCollection(collection);
 // - Return the array with the matching results. If no results are found, return an empty array.
 //}
 // Test the findByArtist function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. 
+//findByArtist();
 //  Check that for artists with multiple matches, all are found.
 
 // When testing your functions, write all tests in the JavaScript file!
