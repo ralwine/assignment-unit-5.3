@@ -19,6 +19,7 @@ function addToCollection(title, artist, yearPublished) {
     }
     return collection.push(newLp);
 }
+// is newLp really the object I should be creating?
 // - Return the newly created object
 
 addToCollection('Pod', 'Breeders', 1990);
@@ -54,8 +55,8 @@ function showCollection(array) {
     for (let i = 0; i < array.length; i++) {
         console.log(array[i]);
         //    TITLE by ARTIST, published in YEAR.
-        //console.log(array.title, ', by ', array.artist, ' published in ', array.yearPublished);
-        // Why does the line of code directly above turn out undefined/
+        console.log(array.title, ', by ', array.artist, ' published in ', array.yearPublished);
+        // Why does the line of code directly above result in undefind properties?
     }
 }
 // Test the showCollection function.
