@@ -13,9 +13,9 @@ function addToCollection(title, artist, yearPublished) {
     console.log(title, artist, yearPublished);
     // - Add the new object to the end of the collection array
     let newLp = {
-        "title": title,
-        "artist": artist,
-        "yearPublished": yearPublished,
+        title,
+        artist,
+        yearPublished,
     }
     return collection.push(newLp);
 }
@@ -43,6 +43,7 @@ console.log(collection);
 // - After all are added, console.log the collection array.
 console.log(collection);
 console.log(collection.length);
+
 // Add a function named showCollection. This function should:
 function showCollection(array) {
     // - Take in an array parameter. (This allows it to be reused to show any collection, 
@@ -50,10 +51,11 @@ function showCollection(array) {
     // - Console.log the number of items in the array.
     console.log(array.length);
     // - Loop over the array and console.log each album's information formatted like: 
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         console.log(array[i]);
         //    TITLE by ARTIST, published in YEAR.
         //console.log(array.title, ', by ', array.artist, ' published in ', array.yearPublished);
+        // Why does the line of code directly above turn out undefined/
     }
 }
 // Test the showCollection function.
@@ -65,18 +67,20 @@ function findByArtist(artist) {
     // - Create an array to hold any results, empty to start
     let artistArray = [];
     // - Loop through the collection and add any objects with a matching artist to the array.
-    for (i = 0; i < collection.length; i++) {
-        if (artist === collection[i]) {
+    //for (let artist of collection) {
+    for (let i = 0; i < collection.length; i++) {
+        if (artist == collection[i]) {
             // - Return the array with the matching results. If no results are found, return an empty array.
             return artistArray.push(collection[i]);
         }
-        else(console.log('Artist not found!'));
+        else (console.log('Artist not found!'));
     }
     console.log(artistArray);
 }
 
 // Test the findByArtist function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection.
+findByArtist('Simply Saucer');
+// ^This checks out because it isn't in collection, but why not this...
 findByArtist('XTC');
 //  Check that for artists with multiple matches, all are found.
-
-// When testing your functions, write all tests in the JavaScript file!
+findByArtist('My Bloody Valentine');
